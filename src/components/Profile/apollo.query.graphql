@@ -1,0 +1,15 @@
+query GetProfile {
+  viewer {
+    id
+    login
+    name
+    company
+    avatarUrl
+    bio
+    repositories(last: 5, ownerAffiliations: OWNER) {
+      nodes {
+        name
+      }
+    }
+  }
+}
